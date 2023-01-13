@@ -1,5 +1,7 @@
  @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
  @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&family=Rubik&display=swap');
+ @import "./variables.scss";
+
 
  body{
     background-color:#c3cfe2 ;
@@ -8,6 +10,8 @@
     font-weight: 300;
     text-align:center;
  }
+
+/* PART 1*/
 
  .container {
     padding: 15px;
@@ -22,10 +26,10 @@ border-radius: 50px;
 .whitebox{ 
     padding: 5px;
     font-size: 30px;
-    color: rgba(7, 6, 6, 0.957);
+    color: $fontcolorwhitebox;
    height: 40vh;
     text-align: center;
-    background-color: #fff ;
+    background-color: $whiteboxcolor;
     -webkit-border-top-left-radius: 50px;
 -webkit-border-top-right-radius: 50px;
 -moz-border-radius-topleft: 50px;
@@ -33,24 +37,21 @@ border-radius: 50px;
 border-top-left-radius: 50px;
 border-top-right-radius: 50px;
 }
-
  .avocado {
     border: 10px bold #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    margin: auto;
     -webkit-border-radius: 500px;
 -moz-border-radius: 500px;
 border-radius: 500px;
-}}
+}
 
 .footerpurplebox{
     padding: 5px;
     font-size: 30px;
    height: 40vh;
-    color: white;
+    color: $fontcolorpurplebox;
     text-align: center;
-    background-color: #686de0 ;
+    background-color: $purpleboxcolor ;
     -webkit-border-bottom-right-radius: 50px;
 -webkit-border-bottom-left-radius: 50px;
 -moz-border-radius-bottomright: 50px;
@@ -63,7 +64,61 @@ border-bottom-left-radius: 50px;
 }
 .examplewebsite{
     font-family: 'Roboto Mono', monospace;
-    color: #afb1f3;
+    color: $examplecolor;
     font-weight: bold;
 }
+}}
+
+
+/*PART 2*/ 
+
+.gridcontainer {
+    height: auto;
+    width: fit-content;
+    margin: 0 auto;
+    border: 2px solid ;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat( 7, 1fr);
+    grid-template-areas: 
+    "avocado1"
+    "avocado2"
+    "avocado3"
+    "avocado4"
+    "avocado5"
+    "avocado6"
+    "avocado7";
+    gap: 10px; 
 }
+
+/*Tablet & Desktop navigation*/
+
+/*Tablets & iPads*/
+
+ @media (min-width: 768px) {                                                          
+    .gridcontainer {
+        grid-template-columns: 1fr 1fr ;
+        grid-template-rows: repeat(4, 1fr) ;
+        grid-template-areas: 
+        "avocado1 avocado2"
+        "avocado3 avocado4"
+        "avocado5 avocado6"
+        "avocado7";
+    }                                                                          
+}    
+
+
+/*Desktops + */
+
+ @media screen and (min-width: 1280px) {  
+    .gridcontainer {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+        "avocado1 avocado2 avocado3"
+        "avocado4 avocado5 avocado6"
+        "avocado7";
+    }
+
+}   
+
