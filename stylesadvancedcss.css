@@ -23,6 +23,7 @@ body {
   color: rgba(7, 6, 6, 0.957);
   height: 40vh;
   text-align: center;
+  position: relative;
   background-color: #fff;
   -webkit-border-top-left-radius: 50px;
   -webkit-border-top-right-radius: 50px;
@@ -34,6 +35,9 @@ body {
 .container .avocado {
   border: 10px bold #fff;
   margin: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
   border-radius: 500px;
 }
 .container .footerpurplebox {
@@ -42,6 +46,7 @@ body {
   height: 40vh;
   color: white;
   text-align: center;
+  position: relative;
   background-color: #686de0;
   -webkit-border-bottom-right-radius: 50px;
   -webkit-border-bottom-left-radius: 50px;
