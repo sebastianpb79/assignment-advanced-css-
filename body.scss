@@ -1,0 +1,86 @@
+body{
+    background-color:#c3cfe2;
+    margin: 0;
+    font-family: "Raleway", sans-serif;
+    font-weight: 300;
+    text-align:center;
+ }
+
+
+/*PART 1*/
+
+@mixin flexboxcenter {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: stretch;
+}
+
+@mixin containerradius {
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+}
+
+@mixin whiteradius {
+    -webkit-border-top-left-radius: 50px;
+-webkit-border-top-right-radius: 50px;
+-moz-border-radius-topleft: 50px;
+-moz-border-radius-topright: 50px;
+border-top-left-radius: 50px;
+border-top-right-radius: 50px;
+}
+
+@mixin purpleradius {
+    -webkit-border-bottom-right-radius: 50px;
+-webkit-border-bottom-left-radius: 50px;
+-moz-border-radius-bottomright: 50px;
+-moz-border-radius-bottomleft: 50px;
+border-bottom-right-radius: 50px;
+border-bottom-left-radius: 50px;
+}
+
+@mixin avocadoradius {
+    -webkit-border-radius: 360px;
+-moz-border-radius: 360px;
+border-radius: 360px;
+}
+
+/*PART 2*/
+
+@mixin grindcontainer {
+    height: auto;
+    width: fit-content;
+    margin: 0 auto;
+    gap: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat( 7, 1fr);
+    grid-template-areas: 
+    "avocado1"
+    "avocado2"
+    "avocado3"
+    "avocado4"
+    "avocado5"
+    "avocado6"
+    "avocado7";
+}
+
+@mixin gridtablets {
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows: repeat(4, 1fr) ;
+    grid-template-areas: 
+    "avocado1 avocado2"
+    "avocado3 avocado4"
+    "avocado5 avocado6"
+    "avocado7";
+}
+
+@mixin griddesktop {
+    grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+        "avocado1 avocado2 avocado3"
+        "avocado4 avocado5 avocado6"
+        "avocado7";
+}

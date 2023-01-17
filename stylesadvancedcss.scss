@@ -1,69 +1,53 @@
  @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
  @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&family=Rubik&display=swap');
+ @import "./body.scss";
  @import "./variables.scss";
 
-
- body{
-    background-color:#c3cfe2 ;
-    margin: 0;
-    font-family: "Raleway", sans-serif;
-    font-weight: 300;
-    text-align:center;
- }
 
 /* PART 1*/
 
  .container {
+    @include flexboxcenter(); 
+    @include containerradius();
     padding: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: stretch;
-    -webkit-border-radius: 50px;
--moz-border-radius: 50px;
-border-radius: 50px;
 
 .whitebox{ 
-    padding: 5px;
-    font-size: 30px;
-    color: $fontcolorwhitebox;
-   height: 40vh;
+    @include whiteradius ();
+    padding: 15px;
+    font-size: 28px;
+    height: 35vh;
     text-align: center;
     position: relative;
+    color: $fontcolorwhitebox;
     background-color: $whiteboxcolor;
-    -webkit-border-top-left-radius: 50px;
--webkit-border-top-right-radius: 50px;
--moz-border-radius-topleft: 50px;
--moz-border-radius-topright: 50px;
-border-top-left-radius: 50px;
-border-top-right-radius: 50px;
 }
+
  .avocado {
-    border: 10px bold #fff;
+    @include avocadoradius();
+    border-width: 5px;
+    border-style: solid;
+    border-image: none;
+    border-color:$whiteboxcolor;
     margin: auto;
     position: absolute;
-    left: 0;
-    right: 0;
-    -webkit-border-radius: 500px;
--moz-border-radius: 500px;
-border-radius: 500px;
+    overflow: hidden;
+    left: 0px;
+    right: 0px;
+    z-index: 1;
 }
 
 .footerpurplebox{
+    @include purpleradius();
     padding: 5px;
-    font-size: 30px;
-   height: 40vh;
-    color: $fontcolorpurplebox;
+    font-size: 20px;
+    height: 30vh;
     text-align: center;
     position: relative;
+    color: $fontcolorpurplebox;
     background-color: $purpleboxcolor ;
-    -webkit-border-bottom-right-radius: 50px;
--webkit-border-bottom-left-radius: 50px;
--moz-border-radius-bottomright: 50px;
--moz-border-radius-bottomleft: 50px;
-border-bottom-right-radius: 50px;
-border-bottom-left-radius: 50px;
+
 .nielsbom{
+    padding-top: 25px;
     font-family: 'Rubik', sans-serif; 
     font-weight: bold;
 }
@@ -72,28 +56,48 @@ border-bottom-left-radius: 50px;
     color: $examplecolor;
     font-weight: bold;
 }
-}}
-
+}
+}
 
 /*PART 2*/ 
 
 .gridcontainer {
-    height: auto;
+    @include grindcontainer();
+
+.avocado1, .avocado2, .avocado3, .avocado4, .avocado5, .avocado6, .avocado7 {
+    position: relative;
     width: fit-content;
-    margin: 0 auto;
-    border: 2px solid ;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat( 7, 1fr);
-    grid-template-areas: 
-    "avocado1"
-    "avocado2"
-    "avocado3"
-    "avocado4"
-    "avocado5"
-    "avocado6"
-    "avocado7";
-    gap: 10px; 
+
+.avocadogridcontainer{
+    width: 95%;
+    height: auto;
+    border-radius: 10px;
+    color: $fadeout;
+    opacity: 1;
+    transition: opacity 1s ;
+    &:hover{
+        opacity: 0.0;
+        background-color: $fadeout;
+    }
+}
+
+button{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: $whiteboxcolor;
+    border:none;
+    border-radius: 4px;
+    font-size: 18px;
+    padding: 15px 30px;
+    text-align: center;
+    cursor: pointer;
+    &:hover{
+        opacity: 0.5;
+    }
+}
+}
 }
 
 /*Tablet & Desktop navigation*/
@@ -102,28 +106,15 @@ border-bottom-left-radius: 50px;
 
  @media (min-width: 768px) {                                                          
     .gridcontainer {
-        grid-template-columns: 1fr 1fr ;
-        grid-template-rows: repeat(4, 1fr) ;
-        grid-template-areas: 
-        "avocado1 avocado2"
-        "avocado3 avocado4"
-        "avocado5 avocado6"
-        "avocado7";
+        @include gridtablets ();
     }                                                                          
 }    
-
 
 /*Desktops + */
 
  @media screen and (min-width: 1280px) {  
     .gridcontainer {
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 1fr;
-        grid-template-areas: 
-        "avocado1 avocado2 avocado3"
-        "avocado4 avocado5 avocado6"
-        "avocado7";
+        @include griddesktop();
     }
-
 }   
 
