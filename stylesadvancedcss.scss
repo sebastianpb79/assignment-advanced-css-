@@ -72,12 +72,12 @@
     width: 95%;
     height: auto;
     border-radius: 10px;
-    color: $fadeout;
+    background: $fadein;
     opacity: 1;
     transition: opacity 1s ;
     &:hover{
         opacity: 0.0;
-        background-color: $fadeout;
+        background: $fadeout;
     }
 }
 
@@ -117,4 +117,46 @@ button{
         @include griddesktop();
     }
 }   
+
+/*PART 3*/
+
+.containerimages{
+position: relative;
+width: 50px;
+
+&:hover{
+    width: 50%;
+    left: 0;  
+    .overlay{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 100%;;
+        overflow: hidden;
+        width: 0;
+        height: auto;
+        transition: .5s ease;
+    }}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+
+.text{
+    white-space: nowrap; 
+    color: black;
+    font-size: 20px;
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(50%, 50%);
+
+}
+
+}
+
 

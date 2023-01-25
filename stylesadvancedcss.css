@@ -97,13 +97,13 @@ body {
   width: 95%;
   height: auto;
   border-radius: 10px;
-  color: rgba(51, 47, 47, 0.922);
+  background: rgb(192, 51, 51);
   opacity: 1;
   transition: opacity 1s;
 }
 .gridcontainer .avocado1 .avocadogridcontainer:hover, .gridcontainer .avocado2 .avocadogridcontainer:hover, .gridcontainer .avocado3 .avocadogridcontainer:hover, .gridcontainer .avocado4 .avocadogridcontainer:hover, .gridcontainer .avocado5 .avocadogridcontainer:hover, .gridcontainer .avocado6 .avocadogridcontainer:hover, .gridcontainer .avocado7 .avocadogridcontainer:hover {
   opacity: 0;
-  background-color: rgba(51, 47, 47, 0.922);
+  background: rgba(51, 47, 47, 0.922);
 }
 .gridcontainer .avocado1 button, .gridcontainer .avocado2 button, .gridcontainer .avocado3 button, .gridcontainer .avocado4 button, .gridcontainer .avocado5 button, .gridcontainer .avocado6 button, .gridcontainer .avocado7 button {
   position: absolute;
@@ -138,4 +138,38 @@ body {
     grid-template-rows: 1fr;
     grid-template-areas: "avocado1 avocado2 avocado3" "avocado4 avocado5 avocado6" "avocado7";
   }
+}
+/*PART 3*/
+.containerimages {
+  position: relative;
+  width: 50px;
+}
+.containerimages:hover {
+  width: 50%;
+  left: 0;
+}
+.containerimages:hover .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 100%;
+  overflow: hidden;
+  width: 0;
+  height: auto;
+  transition: 0.5s ease;
+}
+.containerimages img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.containerimages .text {
+  white-space: nowrap;
+  color: black;
+  font-size: 20px;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(50%, 50%);
 }/*# sourceMappingURL=stylesadvancedcss.css.map */
