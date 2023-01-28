@@ -142,14 +142,19 @@ body {
 /*PART 3*/
 .containerimages {
   position: relative;
-  width: 50px;
+  width: 100px;
+  display: block;
+  float: left;
 }
 .containerimages .wrapper {
-  width: 100%;
+  padding: 4px;
+  position: relative;
+  width: 250px;
+  left: -30px;
 }
 .containerimages .wrapper:hover {
-  width: 50px;
   right: 0;
+  width: 400px;
 }
 .containerimages .wrapper:hover .overlay {
   position: relative;
@@ -159,30 +164,29 @@ body {
   overflow: hidden;
   width: 0;
   height: auto;
-  transition: 0.5s ease;
+  transition: 1s ease-in-out;
 }
-.containerimages .wrapper:hover .overlay .text {
-  white-space: nowrap;
-  color: black;
-  font-size: 20px;
-  position: absolute;
-  overflow: hidden;
-  top: 50%;
-  left: 50%;
-  transform: translate(50%, 50%);
-}
-.fa fa-laptop .containerimages .wrapper::before {
+.fa fa-laptop .containerimages .wrapper:hover .overlay i::before {
   content: "\f5fc";
 }
-.fa fa-twitter .containerimages .wrapper::before {
+.fa fa-twitter .containerimages .wrapper:hover .overlay i::before {
   content: "\f099";
 }
-.fa fa-linkedin .containerimages .wrapper::before {
+.fa fa-linkedin .containerimages .wrapper:hover .overlay i::before {
   content: "\f0e1";
 }
-.fa fa-facebook .containerimages .wrapper::before {
+.fa fa-facebook .containerimages .wrapper:hover .overlay i::before {
   content: "\f39e";
 }
-.fa fa-github .containerimages .wrapper::before {
+.fa fa-github .containerimages .wrapper:hover .overlay i::before {
   content: "\f09b";
+}
+.containerimages .wrapper:hover .overlay i .text {
+  white-space: nowrap;
+  color: black;
+  font-size: 30px;
+  position: absolute;
+  overflow: hidden;
+  right: 100px;
+  transform: translate(50%);
 }/*# sourceMappingURL=stylesadvancedcss.css.map */
