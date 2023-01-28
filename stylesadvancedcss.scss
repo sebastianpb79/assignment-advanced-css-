@@ -154,32 +154,26 @@ transform: translate(50%, 50%);
 }
 
 }
+}
 
-
-i{
-    .fa-solid fa-laptop-code &::before {
+ .fa fa-laptop &::before {
         content: "\f5fc";
     }
-    .fa-brands fa-twitter &::before {
+    .fa fa-twitter &::before {
         content: "\f099";
     }
-    .fa-brands fa-linkedin &::before {
+    .fa fa-linkedin &::before {
         content: "\f0e1";
     }
-    .fa-brands fa-facebook-f &::before {
+    .fa fa-facebook &::before {
         content: "\f39e";
     }
-    .fa-brands fa-github &::before {
+    .fa fa-github &::before {
         content: "\f09b";
     }
- }
-
-
     
 }
 
-
 }
 
 
-}

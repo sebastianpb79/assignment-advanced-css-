@@ -171,18 +171,18 @@ body {
   left: 50%;
   transform: translate(50%, 50%);
 }
-.fa-solid fa-laptop-code .containerimages .wrapper:hover i::before {
+.fa fa-laptop .containerimages .wrapper::before {
   content: "\f5fc";
 }
-.fa-brands fa-twitter .containerimages .wrapper:hover i::before {
+.fa fa-twitter .containerimages .wrapper::before {
   content: "\f099";
 }
-.fa-brands fa-linkedin .containerimages .wrapper:hover i::before {
+.fa fa-linkedin .containerimages .wrapper::before {
   content: "\f0e1";
 }
-.fa-brands fa-facebook-f .containerimages .wrapper:hover i::before {
+.fa fa-facebook .containerimages .wrapper::before {
   content: "\f39e";
 }
-.fa-brands fa-github .containerimages .wrapper:hover i::before {
+.fa fa-github .containerimages .wrapper::before {
   content: "\f09b";
 }/*# sourceMappingURL=stylesadvancedcss.css.map */
