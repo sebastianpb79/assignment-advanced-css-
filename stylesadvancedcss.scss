@@ -124,60 +124,84 @@ button{
 position: relative;
 width: 100px;
 display: block;
-float: left;
+float: right;
 
 .wrapper{
-padding: 4px ;
+padding: 5px ;
 position: relative;
-width: 250px;
-left: -30px;
+width: 280px;
+left: -200px;
 
 &:hover{
     right: 0;
-    width: 400px;  
+    width: 50px;  
+    transition: 2s ease-out;
 
-.overlay{
-    position: relative;
-    bottom: 0;
-    left: 0;
-    right: 100%;
-    overflow: hidden;
-    width: 0;
-    height: auto;
-    transition: 1s ease-in-out;
+    .fa fa-laptop {
+        .text{
+            background-color: #e17b77;
+            white-space: nowrap; 
+            color: black;
+            font-size: 15px;
+            position: absolute;
+            overflow: hidden;
+            right: 100px;
+            transform: translate(50%);
+            }}
 
-    i{
-        .fa fa-laptop &::before {
-        content: "\f5fc";
-    }
-    .fa fa-twitter &::before {
-        content: "\f099";
-    }
-    .fa fa-linkedin &::before {
-        content: "\f0e1";
-    }
-    .fa fa-facebook &::before {
-        content: "\f39e";
-    }
-    .fa fa-github &::before {
-        content: "\f09b";
-    }
+    .fa fa-twitter { 
+        .text{
+            background-color: #3b5998;
+            white-space: nowrap; 
+            color: black;
+            font-size: 15px;
+            position: absolute;
+            overflow: hidden;
+            right: 100px;
+            transform: translate(50%);
+            }}
+
+    .fa fa-linkedin { 
+        .text{
+            background-color: #00aced;
+            white-space: nowrap; 
+            color: black;
+            font-size: 15px;
+            position: absolute;
+            overflow: hidden;
+            right: 100px;
+            transform: translate(50%);
+            }}
+
+    .fa fa-facebook { 
+        .text{
+            background-color: #007bb6;
+            white-space: nowrap; 
+            color: black;
+            font-size: 15px;
+            position: absolute;
+            overflow: hidden;
+            right: 100px;
+            transform: translate(50%);
+            }}
+
+    .fa fa-github { 
+        .text{
+            background-color: #333;
+            white-space: nowrap; 
+            color: black;
+            font-size: 15px;
+            position: absolute;
+            overflow: hidden;
+            right: 100px;
+            transform: translate(50%);
+            }}
 
 
-    .text{
-        white-space: nowrap; 
-        color: black;
-        font-size: 30px;
-        position: absolute;
-        overflow: hidden;
-        right: 100px;
-        transform: translate(50%);
-        }
 }
 
 }
 
 }
 
-}
-}
+
