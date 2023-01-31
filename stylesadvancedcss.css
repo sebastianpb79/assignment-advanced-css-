@@ -10,6 +10,7 @@ body {
 
 /*PART 1*/
 /*PART 2*/
+/*PART 3*/
 /* PART 1*/
 .container {
   display: flex;
@@ -149,58 +150,73 @@ body {
 .containerimages .wrapper {
   padding: 5px;
   position: relative;
-  width: 280px;
+  width: 250px;
   left: -200px;
 }
 .containerimages .wrapper:hover {
   right: 0;
   width: 50px;
-  transition: 2s ease-out;
+  transition: 5s ease-out;
 }
-.containerimages .wrapper:hover .fa fa-laptop .text {
+.containerimages .wrapper:hover .fa.fa-latop {
+  background-color: #e17b77;
+}
+.containerimages .wrapper:hover .fa.fa-latop .text {
   background-color: #e17b77;
   white-space: nowrap;
-  color: black;
+  color: whitesmoke;
   font-size: 15px;
   position: absolute;
   overflow: hidden;
   right: 100px;
   transform: translate(50%);
 }
-.containerimages .wrapper:hover .fa fa-twitter .text {
+.containerimages .wrapper:hover .fa.fa-twitter {
+  background-color: #3b5998;
+}
+.containerimages .wrapper:hover .fa.fa-twitter .text {
   background-color: #3b5998;
   white-space: nowrap;
-  color: black;
+  color: whitesmoke;
   font-size: 15px;
   position: absolute;
   overflow: hidden;
   right: 100px;
   transform: translate(50%);
 }
-.containerimages .wrapper:hover .fa fa-linkedin .text {
+.containerimages .wrapper:hover .fa.fa-linkedin {
+  background-color: #00aced;
+}
+.containerimages .wrapper:hover .fa.fa-linkedin .text {
   background-color: #00aced;
   white-space: nowrap;
-  color: black;
+  color: whitesmoke;
   font-size: 15px;
   position: absolute;
   overflow: hidden;
   right: 100px;
   transform: translate(50%);
 }
-.containerimages .wrapper:hover .fa fa-facebook .text {
+.containerimages .wrapper:hover .fa.fa-facebook {
+  background-color: #007bb6;
+}
+.containerimages .wrapper:hover .fa.fa-facebook .text {
   background-color: #007bb6;
   white-space: nowrap;
-  color: black;
+  color: whitesmoke;
   font-size: 15px;
   position: absolute;
   overflow: hidden;
   right: 100px;
   transform: translate(50%);
 }
-.containerimages .wrapper:hover .fa fa-github .text {
+.containerimages .wrapper:hover .fa.fa-github {
+  background-color: #333;
+}
+.containerimages .wrapper:hover .fa.fa-github .text {
   background-color: #333;
   white-space: nowrap;
-  color: black;
+  color: whitesmoke;
   font-size: 15px;
   position: absolute;
   overflow: hidden;

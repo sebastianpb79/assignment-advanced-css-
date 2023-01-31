@@ -84,3 +84,14 @@ border-radius: 360px;
         "avocado4 avocado5 avocado6"
         "avocado7";
 }
+
+/*PART 3*/
+@mixin textarea {
+    white-space: nowrap; 
+            color:whitesmoke;
+            font-size: 15px;
+            position: absolute;
+            overflow: hidden;
+            right: 100px;
+            transform: translate(50%)
+}

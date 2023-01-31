@@ -129,72 +129,42 @@ float: right;
 .wrapper{
 padding: 5px ;
 position: relative;
-width: 280px;
+width: 250px;
 left: -200px;
 
 &:hover{
     right: 0;
     width: 50px;  
-    transition: 2s ease-out;
+    transition: 5s ease-out;
 
-    .fa fa-laptop {
+    .fa.fa-latop { background-color: $blogcolor;
         .text{
-            background-color: #e17b77;
-            white-space: nowrap; 
-            color: black;
-            font-size: 15px;
-            position: absolute;
-            overflow: hidden;
-            right: 100px;
-            transform: translate(50%);
+            background-color: $blogcolor;
+            @include textarea();
             }}
 
-    .fa fa-twitter { 
+    .fa.fa-twitter {  background-color: $twittercolor;
         .text{
-            background-color: #3b5998;
-            white-space: nowrap; 
-            color: black;
-            font-size: 15px;
-            position: absolute;
-            overflow: hidden;
-            right: 100px;
-            transform: translate(50%);
+            background-color: $twittercolor ;
+            @include textarea();
             }}
 
-    .fa fa-linkedin { 
+    .fa.fa-linkedin { background-color: $linkedincolor ;
         .text{
-            background-color: #00aced;
-            white-space: nowrap; 
-            color: black;
-            font-size: 15px;
-            position: absolute;
-            overflow: hidden;
-            right: 100px;
-            transform: translate(50%);
+            background-color: $linkedincolor ;
+            @include textarea();
             }}
 
-    .fa fa-facebook { 
+    .fa.fa-facebook { background-color: $facebookcolor;
         .text{
-            background-color: #007bb6;
-            white-space: nowrap; 
-            color: black;
-            font-size: 15px;
-            position: absolute;
-            overflow: hidden;
-            right: 100px;
-            transform: translate(50%);
+            background-color: $facebookcolor;
+            @include textarea();
             }}
 
-    .fa fa-github { 
+    .fa.fa-github { background-color: $githubcolor ;
         .text{
-            background-color: #333;
-            white-space: nowrap; 
-            color: black;
-            font-size: 15px;
-            position: absolute;
-            overflow: hidden;
-            right: 100px;
-            transform: translate(50%);
+            background-color: $githubcolor ;
+            @include textarea();
             }}
 
 
