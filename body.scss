@@ -10,6 +10,8 @@ body{
 /*PART 1*/
 
 @mixin flexboxcenter {
+    width: 600px;
+    height: 60vh;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -89,7 +91,7 @@ border-radius: 360px;
 @mixin textarea {
     white-space: nowrap; 
             color:whitesmoke;
-            font-size: 15px;
+            font-size: 20px;
             position: absolute;
             overflow: hidden;
             right: 100px;

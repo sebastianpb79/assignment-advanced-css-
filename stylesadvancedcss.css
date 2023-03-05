@@ -13,6 +13,8 @@ body {
 /*PART 3*/
 /* PART 1*/
 .container {
+  width: 600px;
+  height: 60vh;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -28,8 +30,8 @@ body {
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
   padding: 15px;
-  font-size: 28px;
-  height: 35vh;
+  font-size: 20px;
+  height: 30vh;
   text-align: center;
   position: relative;
   color: rgb(50, 50, 52);
@@ -42,9 +44,11 @@ body {
   -o-border-image: none;
      border-image: none;
   border-color: #fff;
-  margin: auto;
-  position: absolute;
+  margin-top: 20px;
+  position: relative;
   overflow: hidden;
+  width: -moz-max-content;
+  width: max-content;
   left: 0px;
   right: 0px;
   z-index: 1;
@@ -56,7 +60,7 @@ body {
   -moz-border-radius-bottomleft: 50px;
   border-bottom-right-radius: 50px;
   border-bottom-left-radius: 50px;
-  padding: 5px;
+  padding: 15px;
   font-size: 20px;
   height: 30vh;
   text-align: center;
@@ -78,7 +82,6 @@ body {
 /*PART 2*/
 .gridcontainer {
   height: auto;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   margin: 0 auto;
@@ -90,23 +93,15 @@ body {
 }
 .gridcontainer .avocado1, .gridcontainer .avocado2, .gridcontainer .avocado3, .gridcontainer .avocado4, .gridcontainer .avocado5, .gridcontainer .avocado6, .gridcontainer .avocado7 {
   position: relative;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
-.gridcontainer .avocado1 .avocadogridcontainer, .gridcontainer .avocado2 .avocadogridcontainer, .gridcontainer .avocado3 .avocadogridcontainer, .gridcontainer .avocado4 .avocadogridcontainer, .gridcontainer .avocado5 .avocadogridcontainer, .gridcontainer .avocado6 .avocadogridcontainer, .gridcontainer .avocado7 .avocadogridcontainer {
-  width: 95%;
-  height: auto;
-  border-radius: 10px;
-  background: rgb(192, 51, 51);
+.gridcontainer .avocado1:hover, .gridcontainer .avocado2:hover, .gridcontainer .avocado3:hover, .gridcontainer .avocado4:hover, .gridcontainer .avocado5:hover, .gridcontainer .avocado6:hover, .gridcontainer .avocado7:hover {
   opacity: 1;
-  transition: opacity 1s;
+  transition: opacity 4s;
+  background-color: rgba(51, 47, 47, 0.922);
 }
-.gridcontainer .avocado1 .avocadogridcontainer:hover, .gridcontainer .avocado2 .avocadogridcontainer:hover, .gridcontainer .avocado3 .avocadogridcontainer:hover, .gridcontainer .avocado4 .avocadogridcontainer:hover, .gridcontainer .avocado5 .avocadogridcontainer:hover, .gridcontainer .avocado6 .avocadogridcontainer:hover, .gridcontainer .avocado7 .avocadogridcontainer:hover {
-  opacity: 0;
-  background: rgba(51, 47, 47, 0.922);
-}
-.gridcontainer .avocado1 button, .gridcontainer .avocado2 button, .gridcontainer .avocado3 button, .gridcontainer .avocado4 button, .gridcontainer .avocado5 button, .gridcontainer .avocado6 button, .gridcontainer .avocado7 button {
+.gridcontainer .avocado1:hover button, .gridcontainer .avocado2:hover button, .gridcontainer .avocado3:hover button, .gridcontainer .avocado4:hover button, .gridcontainer .avocado5:hover button, .gridcontainer .avocado6:hover button, .gridcontainer .avocado7:hover button {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -119,8 +114,13 @@ body {
   text-align: center;
   cursor: pointer;
 }
-.gridcontainer .avocado1 button:hover, .gridcontainer .avocado2 button:hover, .gridcontainer .avocado3 button:hover, .gridcontainer .avocado4 button:hover, .gridcontainer .avocado5 button:hover, .gridcontainer .avocado6 button:hover, .gridcontainer .avocado7 button:hover {
-  opacity: 0.5;
+.gridcontainer .avocado1 .avocadogridcontainer, .gridcontainer .avocado2 .avocadogridcontainer, .gridcontainer .avocado3 .avocadogridcontainer, .gridcontainer .avocado4 .avocadogridcontainer, .gridcontainer .avocado5 .avocadogridcontainer, .gridcontainer .avocado6 .avocadogridcontainer, .gridcontainer .avocado7 .avocadogridcontainer {
+  width: 95%;
+  height: auto;
+  border-radius: 10px;
+  background: rgb(192, 51, 51);
+  opacity: 0.1;
+  transition: opacity 5s;
 }
 
 /*Tablet & Desktop navigation*/
@@ -148,15 +148,16 @@ body {
   float: right;
 }
 .containerimages .wrapper {
-  padding: 5px;
+  text-align: right;
+  padding: 10px;
   position: relative;
   width: 250px;
-  left: -200px;
+  margin-left: -30px;
 }
 .containerimages .wrapper:hover {
   right: 0;
   width: 50px;
-  transition: 5s ease-out;
+  transition: 2s ease-out;
 }
 .containerimages .wrapper:hover .fa.fa-latop {
   background-color: #e17b77;
@@ -165,7 +166,7 @@ body {
   background-color: #e17b77;
   white-space: nowrap;
   color: whitesmoke;
-  font-size: 15px;
+  font-size: 20px;
   position: absolute;
   overflow: hidden;
   right: 100px;
@@ -178,7 +179,7 @@ body {
   background-color: #3b5998;
   white-space: nowrap;
   color: whitesmoke;
-  font-size: 15px;
+  font-size: 20px;
   position: absolute;
   overflow: hidden;
   right: 100px;
@@ -191,7 +192,7 @@ body {
   background-color: #00aced;
   white-space: nowrap;
   color: whitesmoke;
-  font-size: 15px;
+  font-size: 20px;
   position: absolute;
   overflow: hidden;
   right: 100px;
@@ -204,7 +205,7 @@ body {
   background-color: #007bb6;
   white-space: nowrap;
   color: whitesmoke;
-  font-size: 15px;
+  font-size: 20px;
   position: absolute;
   overflow: hidden;
   right: 100px;
@@ -217,7 +218,7 @@ body {
   background-color: #333;
   white-space: nowrap;
   color: whitesmoke;
-  font-size: 15px;
+  font-size: 20px;
   position: absolute;
   overflow: hidden;
   right: 100px;

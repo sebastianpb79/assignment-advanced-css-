@@ -14,8 +14,8 @@
 .whitebox{ 
     @include whiteradius ();
     padding: 15px;
-    font-size: 28px;
-    height: 35vh;
+    font-size: 20px;
+    height: 30vh;
     text-align: center;
     position: relative;
     color: $fontcolorwhitebox;
@@ -28,9 +28,10 @@
     border-style: solid;
     border-image: none;
     border-color:$whiteboxcolor;
-    margin: auto;
-    position: absolute;
+   margin-top: 20px;
+    position: relative;
     overflow: hidden;
+    width: max-content;
     left: 0px;
     right: 0px;
     z-index: 1;
@@ -38,7 +39,7 @@
 
 .footerpurplebox{
     @include purpleradius();
-    padding: 5px;
+    padding: 15px;
     font-size: 20px;
     height: 30vh;
     text-align: center;
@@ -68,37 +69,36 @@
     position: relative;
     width: fit-content;
 
+    &:hover{
+        opacity: 1;
+        transition: opacity 4s ;
+        background-color: $fadeout;
+        button{  
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background-color: $whiteboxcolor;
+            border:none;
+            border-radius: 4px;
+            font-size: 18px;
+            padding: 15px 30px;
+            text-align: center;
+            cursor: pointer;
+        }
+    }
 .avocadogridcontainer{
     width: 95%;
     height: auto;
     border-radius: 10px;
     background: $fadein;
-    opacity: 1;
-    transition: opacity 1s ;
-    &:hover{
-        opacity: 0.0;
-        background: $fadeout;
-    }
+    opacity: 0.1;
+    transition: opacity 5s ;
+
+}
+}
 }
 
-button{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    background-color: $whiteboxcolor;
-    border:none;
-    border-radius: 4px;
-    font-size: 18px;
-    padding: 15px 30px;
-    text-align: center;
-    cursor: pointer;
-    &:hover{
-        opacity: 0.5;
-    }
-}
-}
-}
 
 /*Tablet & Desktop navigation*/
 
@@ -127,15 +127,16 @@ display: block;
 float: right;
 
 .wrapper{
-padding: 5px ;
+text-align: right;
+padding: 10px ;
 position: relative;
 width: 250px;
-left: -200px;
+margin-left: -30px;
 
 &:hover{
     right: 0;
     width: 50px;  
-    transition: 5s ease-out;
+    transition: 2s ease-out;
 
     .fa.fa-latop { background-color: $blogcolor;
         .text{
